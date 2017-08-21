@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fraud Case Study by Caitlin Riggs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script async src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</head>
+<body>
+
+<main>
+  <section class="col logo-wrapper">
+    <div class="row">
+      <img src="{{ url_for('static', filename='images/logo.jpg') }}"/>
+    </div>
+  </section>
+
+  <section class="col hidden fraud-result">
+    <div class="row">
+      <h1>Result</h1>
+    </div>
+
+    <div class="row">
+      <p class="result-text"></p>
+    </div>
+
+    <a href="/" class="button">Upload another file</a>
+  </section>
+
+  <section class="col fraud-console">
+    <div class="row">
+      <h1>Fraud Detection</h1>
+    </div>
+
+    <div class="row">
+      <p>Upload a file and the model will add
+        fraud data to it.</p>
+    </div>
+
+    <div class="row">
+      <form action="#" class="upload-fraud-file" method="post" enctype="multipart/form-data">
+
+        <div class="upload-wrapper">
+          <label class="upload-label" for="uploaded-file">Choose a file</label>
+          <input type="file" id="uploaded-file" class="uploaded-file" name="uploaded-file">
+        </div>
+      </form>
+    </div>
+
+    <div class="row hidden upload-error">
+      <p class="info-box warn">
+        Whoops...there was a problem on the back end. Please try again!
+      </p>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

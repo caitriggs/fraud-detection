@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+:root {
+  --row-space-bottom: 1rem;
+  --col-padding: 1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, p {
+  padding: 0;
+  margin: 0;
+}
+
+.col {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: var(--col-padding);
+}
+
+.row {
+  padding-bottom: var(--row-space-bottom);
+}
+
+main {
+  display: flex;
+  max-width: 50rem;
+  margin: 2.5rem auto 0 auto;
+}
+
+.logo-wrapper {
+  flex: 1;
+}
+
+.fraud-console, .fraud-result {
+  flex: 4;
+}
+
+.hidden {
+  display: none;
+}
+
+main, input, button {
+  font-family: Rubik;
+}
+.upload-label, .button {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: rgba(22, 160, 133, 0.75);
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  border-radius: 0.25rem;
+  transition: background-color ease 0.5s;
+}
+.upload-label:not(.upload-processing):hover {
+  background-color: rgba(22, 160, 133, 1);
+}
+.upload-wrapper input[type=file] {
+  display: none;
+}
+.upload-processing {
+  cursor: default;
+  background-color: #ccc;
+}
+
+.info-box {
+  display: block;
+  border: dashed rgba(26, 188, 156, 0.25) 0.01rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.warn {
+  color: rgba(231, 76, 60, 1.0);
+  border-color: rgba(231, 76, 60, 1.0);
+}
